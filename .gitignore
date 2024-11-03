@@ -1,0 +1,41 @@
+# IDE/Editor files
+.idea
+.ensime
+.ensime_cache/
+.bsp
+
+# scala build folders and files
+target
+*.tgz
+*.jar
+!third-party/yourkit/yjp-controller-api-redist.jar
+
+# vim
+*.*~
+
+# dotfiles
+.editorconfig
+.DS_Store
+
+# logs
+*.log
+
+# local settings
+localsettings.json
+*local.conf
+waves_logback.xml
+
+# Text files
+*.txt
+*.ods
+*.csv
+*.dat
+
+# Docker
+docker/temp
+
+package
+!src/package
+native
+
+!lang/jvm/lib/*.jar

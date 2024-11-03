@@ -1,0 +1,34 @@
+{
+  "balances": {
+    "3Jr347UtLyzxh12oXC2DDMtVW8uT1St5Tuj": {
+      "in": 0,
+      "out": -2076500000000
+    },
+    "3JtSvRikEAGUNLRBnuUpNxYkpiDsaCGGfaC": {
+      "in": 0,
+      "out": 0
+    },
+    "3JdgkxuhUkSk15RYz2YVLjw3NxRNjB7ypMz": {
+      "in": 0,
+      "out": -90000000
+    },
+    "3Jm75BtBv3NRoJuccoG421R1ETnfgaFhKRB": {
+      "in": 0,
+      "out": 0
+    }
+  },
+  "cancelledLeases": [
+    {
+      "id": "HQMoZK1xPoAnf2H5aZH5Z6MgLzj5fMBXy9zMWjzP7HY8",
+      "senderPublicKey": "Guj4QwF4Vk1Dz3zZ2jQSX6dbNVWRdxt4eGnKbJnL92me",
+      "amount": 2076500000000,
+      "recipient": "3JicqQQUzZtcXwGFMrgs9sxpuqYaY1SqMxt"
+    },
+    {
+      "id": "2L9ksfiErWtndqCL2u45Wmmg4kgUoNp8vXG8wyuJLhv1",
+      "senderPublicKey": "Dd9fDKM3T1uRY8qY2RQfPEWsEFQe9WxTat4g65kRfgU6",
+      "amount": 90000000,
+      "recipient": "3Jnj4UYo4w9o2Wihv3hhUikB1Hh6YLH4R4F"
+    }
+  ]
+}

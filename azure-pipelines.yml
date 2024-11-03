@@ -1,0 +1,46 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- master
+
+#schedules:
+#- cron: "0 0 * * *"
+#  displayName: Daily midnight build
+#  branches:
+#    include:
+#    - master
+#  always: true
+
+pool:
+  name: Cardium
+
+steps:
+- task: CmdLine@2
+  inputs:
+    script: |
+      rawTag=$(curl -fsSL https://api.github.com/repos/cardiumcoin/CardiumNetwork/releases/latest | tac | grep -m 1 ''tag_name.:'' | tr -cd ''[0-9\.]''
+        )
+      echo "##vso[task.setvariable variable=tag]$rawTag-$(Build.SourceVersion)"  
+      echo "##vso[task.setvariable variable=rawTag]$rawTag"  
+  displayName: Get latest tag and compose var
+
+- task: CmdLine@2
+  inputs:
+    script: 'sbt docker'
+  displayName: "Build Target Folder"
+  
+- task: Docker@2
+  inputs:
+    containerRegistry: 'Cardium docker'
+    repository: 'cardiumcoin/CardiumNetwork'
+    command: 'buildAndPush'
+    Dockerfile: './docker/Dockerfile'
+    addPipelineData: false
+    buildContext: '**'
+    tags: |
+      latest
+      $(tag)
+      $(rawTag)

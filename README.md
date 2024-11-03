@@ -1,4 +1,4 @@
-# Cardium Coin Blockchain: The Ultimate Leap in Scalability and Speed for DApps and the Next Generation of Web3
+# Cardium
 
 The Cardium Coin Blockchain is redefining the blockchain landscape with an infrastructure designed to set new standards for speed and scalability. With a current capacity of 1,000 transactions per second (tx/s) and block generation every 10 seconds, Cardium already delivers a level of performance that few can match. However, with the release of Cardium 2.0, we are set to elevate this network to unprecedented processing power: a capacity of 100,000 tx/s with block generation in just 1 second. This is not merely a promise but a reality in progress.
 

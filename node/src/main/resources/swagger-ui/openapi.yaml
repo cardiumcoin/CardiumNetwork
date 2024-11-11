@@ -5,9 +5,9 @@ info:
   description: >-
     The CardiumNetwork node REST API is the main interface for interacting with the
     blockchain. See
-    [documentation](https://docs.waves.tech/en/waves-node/node-api/) for more
+    [documentation](https://docs.cardium.network/en/waves-node/node-api/) for more
     info. If this API lacks data you need, check the [CARDIUM Data Services
-    API](https://docs.waves.tech/en/building-apps/waves-api-and-sdk/waves-data-service-api).
+    API](https://docs.cardium.network/en/building-apps/waves-api-and-sdk/waves-data-service-api).
     [Data service](https://data-service.cardium.network/v0/)
   termsOfService: ''
   license:
@@ -37,7 +37,7 @@ paths:
       summary: Wallet addresses
       description: >-
         Get a list of account addresses in the [node
-        wallet](https://docs.waves.tech/en/waves-node/how-to-work-with-node-wallet)
+        wallet](https://docs.cardium.network/en/waves-node/how-to-work-with-node-wallet)
       operationId: getWalletAddresses
       responses:
         '200':
@@ -54,7 +54,7 @@ paths:
       summary: Create wallet address
       description: >-
         Generate a new account address in the [node
-        wallet](https://docs.waves.tech/en/waves-node/how-to-work-with-node-wallet)
+        wallet](https://docs.cardium.network/en/waves-node/how-to-work-with-node-wallet)
       operationId: createWalletAddress
       responses:
         '200':
@@ -79,7 +79,7 @@ paths:
       summary: Wallet addresses by range
       description: >-
         Get a list addresses in the [node
-        wallet](https://docs.waves.tech/en/waves-node/how-to-work-with-node-wallet)
+        wallet](https://docs.cardium.network/en/waves-node/how-to-work-with-node-wallet)
         by a given range of indices. Max range {from}-{to} is 1000 addresses.
       operationId: getWalletAddressesRange
       parameters:
@@ -446,7 +446,7 @@ paths:
                     type: integer
                     format: int64
                     description: >-
-                      [Complexity](https://docs.waves.tech/en/ride/base-concepts/complexity)
+                      [Complexity](https://docs.cardium.network/en/ride/base-concepts/complexity)
                       of an account script or the verifier function of the dApp
                       script
                   callableComplexities:
@@ -492,7 +492,7 @@ paths:
       summary: All types of balances in CARDIUM
       description: >-
         Get the available, regular, generating, and effective balance, see
-        [definitions](https://docs.waves.tech/en/blockchain/account/account-balance#account-balance-in-waves)
+        [definitions](https://docs.cardium.network/en/blockchain/account/account-balance#account-balance-in-waves)
       operationId: getWavesBalances
       parameters:
         - $ref: '#/components/parameters/address'
@@ -1274,14 +1274,14 @@ paths:
       description: >-
         Sign a transaction with the private key corresponding to the `sender`.
         Sender must exist in the [node's
-        wallet](https://docs.waves.tech/en/waves-node/how-to-work-with-node-wallet)
+        wallet](https://docs.cardium.network/en/waves-node/how-to-work-with-node-wallet)
       operationId: signTx
       requestBody:
         description: >-
           Transaction [data in
-          JSON](https://docs.waves.tech/en/blockchain/transaction/#json-representation)
+          JSON](https://docs.cardium.network/en/blockchain/transaction/#json-representation)
           including
-          [`type`](https://docs.waves.tech/en/blockchain/transaction-type/) and
+          [`type`](https://docs.cardium.network/en/blockchain/transaction-type/) and
           `sender`. If `timestamp` is omitted, current node's time is used.
           `senderPublicKey` is ignored.
         content:
@@ -1398,9 +1398,9 @@ paths:
       requestBody:
         description: >-
           Transaction [data in
-          JSON](https://docs.waves.tech/en/blockchain/transaction/#json-representation)
+          JSON](https://docs.cardium.network/en/blockchain/transaction/#json-representation)
           including
-          [`type`](https://docs.waves.tech/en/blockchain/transaction-type/) and
+          [`type`](https://docs.cardium.network/en/blockchain/transaction-type/) and
           `senderPublicKey`. To calculate a sponsored fee, specify `feeAssetId`.
           `fee` and `sender` are ignored.
         content:
@@ -1433,7 +1433,7 @@ paths:
       description: >-
         Sign a transaction with the private key corresponding to a given
         address. The address must exist in the [node's
-        wallet](https://docs.waves.tech/en/waves-node/how-to-work-with-node-wallet)
+        wallet](https://docs.cardium.network/en/waves-node/how-to-work-with-node-wallet)
       operationId: signTxWithAddress
       parameters:
         - name: signerAddress
@@ -1446,9 +1446,9 @@ paths:
       requestBody:
         description: >-
           Transaction [data in
-          JSON](https://docs.waves.tech/en/blockchain/transaction/#json-representation)
+          JSON](https://docs.cardium.network/en/blockchain/transaction/#json-representation)
           including
-          [`type`](https://docs.waves.tech/en/blockchain/transaction-type/) and
+          [`type`](https://docs.cardium.network/en/blockchain/transaction-type/) and
           `sender`. If `timestamp` is omitted, current node's time is used.
           `senderPublicKey` is ignored.
         content:
@@ -1473,7 +1473,7 @@ paths:
       tags:
         - transactions
       summary: Broadcast transaction
-      description: Broadcast a signed transaction.<br>Check out [how to use this endpoint](https://docs.waves.tech/en/waves-node/node-api/transactions#step-4-broadcast-transaction)
+      description: Broadcast a signed transaction.<br>Check out [how to use this endpoint](https://docs.cardium.network/en/waves-node/node-api/transactions#step-4-broadcast-transaction)
       operationId: broadcastSignedTx
       parameters:
         - name: trace
@@ -1485,9 +1485,9 @@ paths:
       requestBody:
         description: >-
           Transaction [data in
-          JSON](https://docs.waves.tech/en/blockchain/transaction/#json-representation)
+          JSON](https://docs.cardium.network/en/blockchain/transaction/#json-representation)
           including
-          [`type`](https://docs.waves.tech/en/blockchain/transaction-type/) and
+          [`type`](https://docs.cardium.network/en/blockchain/transaction-type/) and
           `signature`/`proofs`
         content:
           application/json:
@@ -1509,7 +1509,7 @@ paths:
       summary: Merkle proofs
       description: >-
         Get [merkle
-        proofs](https://docs.waves.tech/en/blockchain/block/merkle-root#proof-of-transaction-in-block)
+        proofs](https://docs.cardium.network/en/blockchain/block/merkle-root#proof-of-transaction-in-block)
         for given transactions. For dozens of transactions, better use the POST
         method. Limited by `rest-api.transactions-by-address-limit`, 1000 by default.
       operationId: getMerkleProofs
@@ -1537,7 +1537,7 @@ paths:
       summary: Merkle proofs
       description: >-
         Get [merkle
-        proofs](https://docs.waves.tech/en/blockchain/block/merkle-root#proof-of-transaction-in-block)
+        proofs](https://docs.cardium.network/en/blockchain/block/merkle-root#proof-of-transaction-in-block)
         for given transactions. Limited by `rest-api.transactions-by-address-limit`, 1000 by default.
       operationId: getMerkleProofsViaPost
       requestBody:
@@ -1763,7 +1763,7 @@ paths:
                     type: integer
                     format: int64
                     description: >-
-                      [Complexity](https://docs.waves.tech/en/ride/base-concepts/complexity)
+                      [Complexity](https://docs.cardium.network/en/ride/base-concepts/complexity)
                       of the account or asset script or the verifier function of
                       the dApp script
                   callableComplexities:
@@ -1944,9 +1944,9 @@ paths:
       requestBody:
         description: >-
           Transaction [data in
-          JSON](https://docs.waves.tech/en/blockchain/transaction/#json-representation)
+          JSON](https://docs.cardium.network/en/blockchain/transaction/#json-representation)
           including
-          [`type`](https://docs.waves.tech/en/blockchain/transaction-type/)
+          [`type`](https://docs.cardium.network/en/blockchain/transaction-type/)
         content:
           application/json:
             schema:
@@ -2113,7 +2113,7 @@ paths:
       summary: Information about asset
       description: >-
         Get detailed information about a given asset. See [fields
-        descriptions](https://docs.waves.tech/en/blockchain/token/#custom-token-parameters)
+        descriptions](https://docs.cardium.network/en/blockchain/token/#custom-token-parameters)
       operationId: getAssetDetails
       parameters:
         - $ref: '#/components/parameters/assetId'
@@ -2136,7 +2136,7 @@ paths:
       summary: Information about multiple assets
       description: >-
         Get detailed information about given assets. See [fields
-        descriptions](https://docs.waves.tech/en/blockchain/token/#custom-token-parameters).
+        descriptions](https://docs.cardium.network/en/blockchain/token/#custom-token-parameters).
         For dozens of assets, better use the POST method.
         Limited by `rest-api.asset-details-limit`, 100 by default.
       operationId: getMultipleAssetDetails
@@ -2171,7 +2171,7 @@ paths:
       summary: Information about multiple assets
       description: >-
         Get detailed information about given assets. See [fields
-        descriptions](https://docs.waves.tech/en/blockchain/token/#custom-token-parameters).
+        descriptions](https://docs.cardium.network/en/blockchain/token/#custom-token-parameters).
         Limited by `rest-api.asset-details-limit`, 100 by default.
       operationId: getMultipleAssetDetailsViaPost
       parameters:
@@ -2307,12 +2307,12 @@ paths:
       summary: Account NFTs
       description: >-
         Get a list of [non-fungible
-        tokens](https://docs.waves.tech/en/blockchain/token/non-fungible-token)
+        tokens](https://docs.cardium.network/en/blockchain/token/non-fungible-token)
         at a given address. Max for 1000 tokens. For pagination, use the field
         {after}. See [fields
-        descriptions](https://docs.waves.tech/en/blockchain/token/#custom-token-parameters).<br>Since
+        descriptions](https://docs.cardium.network/en/blockchain/token/#custom-token-parameters).<br>Since
         activation of [feature
-        #15](https://docs.waves.tech/en/waves-node/features/) this method
+        #15](https://docs.cardium.network/en/waves-node/features/) this method
         returns only tokens that are issued as NFT (amount: 1, decimal places:
         0, reissuable: false) after activation of feature #13. Before activation
         of feature #15 the method returned all the assets that are issued as
@@ -2459,7 +2459,7 @@ paths:
       summary: Feature activation status
       description: >-
         Activation statuses of [blockchain
-        features](https://docs.waves.tech/en/waves-node/features/)
+        features](https://docs.cardium.network/en/waves-node/features/)
       operationId: getFeatureStatuses
       responses:
         '200':
@@ -3301,7 +3301,7 @@ components:
           nullable: true
           description: >-
             For [sponsored
-            asset](https://docs.waves.tech/en/blockchain/waves-protocol/sponsored-fee)
+            asset](https://docs.cardium.network/en/blockchain/waves-protocol/sponsored-fee)
             only: the equivalent of 0.02 CARDIUM
         sponsorBalance:
           type: integer
@@ -3309,7 +3309,7 @@ components:
           nullable: true
           description: >-
             For [sponsored
-            asset](https://docs.waves.tech/en/blockchain/waves-protocol/sponsored-fee)
+            asset](https://docs.cardium.network/en/blockchain/waves-protocol/sponsored-fee)
             only: the sponsor balance in CARDIUM
         quantity:
           type: integer
@@ -3447,7 +3447,7 @@ components:
           type: integer
           format: int64
           description: >-
-            [Complexity](https://docs.waves.tech/en/ride/base-concepts/complexity)
+            [Complexity](https://docs.cardium.network/en/ride/base-concepts/complexity)
             of an account or asset script or the verifier function of the dApp
             script
         callableComplexities:
@@ -3718,7 +3718,7 @@ components:
         * `succeeded`: transaction is successful
         * `script_execution_failed`: the dApp script or the asset script failed
 
-        See [Transaction Validation](https://docs.waves.tech/en/blockchain/transaction/transaction-validation) for details.
+        See [Transaction Validation](https://docs.cardium.network/en/blockchain/transaction/transaction-validation) for details.
     LeaseStatus:
       type: string
       enum:
